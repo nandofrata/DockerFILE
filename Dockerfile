@@ -7,4 +7,6 @@ RUN yum install -y nano vim net-tools httpd
 ADD run-httpd.sh /run-httpd.sh
 RUN chmod -v +x /run-httpd.sh
 
+EXPOSE 80 
+
 CMD ["/run-httpd.sh"]
