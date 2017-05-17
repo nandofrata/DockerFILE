@@ -8,6 +8,9 @@ RUN yum install -y php php-mysql libzip php-cli php-common php-pdo
 ADD run-httpd.sh /run-httpd.sh
 RUN chmod -v +x /run-httpd.sh
 
+# PHPINFO
+ADD phpinfo.php /var/www/html/phpinfo.php
+
 EXPOSE 80 
 
 CMD ["/run-httpd.sh"]
